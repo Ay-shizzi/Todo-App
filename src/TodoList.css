@@ -1,0 +1,187 @@
+body {
+  background-color: var(--body-background);
+}
+.dark-mode {
+  --body-background: var(--Very-Dark-Blue);
+}
+.light-mode {
+  --body-background: var(--Very-Light-Grayish-Blue);
+}
+.header {
+  background: var(--header-background) no-repeat center;
+  background-size: cover;
+  height: 40vh;
+}
+.dark-mode.header {
+  --header-background: url("./images/bg-desktop-dark.jpg");
+}
+.light-mode.header {
+  --header-background: url("./images/bg-desktop-light.jpg");
+}
+.content {
+  width: 600px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  padding-bottom: 30px;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-name {
+  color: var(--White);
+  font-size: 46px;
+  letter-spacing: 10px;
+}
+.theme-icon {
+  cursor: pointer;
+}
+.input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 30px;
+  color: var(--input-color);
+  background-color: var(--input-background);
+  font-size: 18px;
+}
+.dark-mode.input {
+  --input-color: var(--Light-Grayish-Blue);
+  --input-background: var(--Very-Dark-Desaturated-Blue);
+}
+.light-mode.input {
+  --input-color: var(--Very-Dark-Grayish-Blue);
+  --input-background: var(--Very-Light-Gray);
+}
+.todolist-input {
+  display: flex;
+  margin-top: 30px;
+}
+.add-button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  height: 50px;
+  width: 100px;
+  margin-left: 20px;
+  cursor: pointer;
+  color: var(--btn-color);
+  background-color: var(--btn-background);
+}
+.dark-mode.add-button {
+  --btn-color: var(--Light-Grayish-Blue);
+  --btn-background: var(--Very-Dark-Desaturated-Blue);
+}
+.light-mode.add-button {
+  --btn-color: var(--Very-Dark-Grayish-Blue);
+  --btn-background: var(--Very-Light-Gray);
+}
+form {
+  margin-top: 50px;
+}
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  border-radius: 5px;
+  padding: 0 30px;
+  box-shadow: 0px 12px 15px 0px rgba(0, 0, 0, 0.5);
+  background-color: var(--output-background);
+  color: var(--output-color);
+}
+
+.todo-item input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.todo-item label {
+  position: relative;
+  cursor: pointer;
+}
+
+.todo-item label:before {
+  content: "";
+  background-color: transparent;
+  border: 1px solid var(--Dark-Grayish-Blue);
+  border-radius: 50px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.todo-item input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  width: 4px;
+  height: 8px;
+  border: solid var(--Very-Light-Gray);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.todo-item input:checked + label:before {
+  background: linear-gradient(
+    144deg,
+    hsl(192, 100%, 67%) 36%,
+    hsl(280, 87%, 65%) 67%
+  );
+  border-color: var(--Dark-Grayish-Blue);
+}
+.dark-mode.todo-item {
+  --output-color: var(--Light-Grayish-Blue);
+  --output-background: var(--Very-Dark-Desaturated-Blue);
+}
+.light-mode.todo-item {
+  --output-color: var(--Very-Dark-Grayish-Blue);
+  --output-background: var(--Very-Light-Gray);
+}
+.close-btn {
+  cursor: pointer;
+}
+.todolist-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.5);
+  background-color: var(--options-background);
+  color: var(--options-color);
+}
+.dark-mode.todolist-options {
+  --options-color: var(--Light-Grayish-Blue);
+  --options-background: var(--Very-Dark-Desaturated-Blue);
+}
+.light-mode.todolist-options {
+  --options-color: var(--Very-Dark-Grayish-Blue);
+  --options-background: var(--Very-Light-Gray);
+}
+.todolist-options p:hover {
+  color: var(--Bright-Blue);
+}
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
